@@ -27,8 +27,15 @@ class ProfileSectionsView: UIView {
     var separatorView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .textDisable
+        view.backgroundColor = .disable
         return view
+    }()
+    
+    var scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.backgroundColor = .white
+        return scrollView
     }()
     
     
@@ -38,7 +45,6 @@ class ProfileSectionsView: UIView {
         super.init(frame: .zero)
         
         backgroundColor = .green
-        print(sections)
         
         setupSectionButtons()
         setupSubviews()
@@ -46,6 +52,30 @@ class ProfileSectionsView: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setupSubviews() {
+        addSubview(headerView)
+        addSubview(separatorView)
+        addSubview(scrollView)
+        
+        NSLayoutConstraint.activate([
+            headerView.topAnchor.constraint(equalTo: self.topAnchor),
+            headerView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            headerView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            headerView.heightAnchor.constraint(equalToConstant: 49),
+            
+            separatorView.topAnchor.constraint(equalTo: headerView.bottomAnchor),
+            separatorView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            separatorView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            separatorView.heightAnchor.constraint(equalToConstant: 1),
+            
+            scrollView.topAnchor.constraint(equalTo: separatorView.bottomAnchor),
+            scrollView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+            ])
+        
     }
     
     func setupSectionButtons() {
@@ -69,29 +99,8 @@ class ProfileSectionsView: UIView {
                 sectionView.trailingAnchor.constraint(equalTo: headerView.trailingAnchor).isActive = true
             }
             
-            sectionViews.append(sectionView)            
+            sectionViews.append(sectionView)
         }
-        
-        
-    }
-    
-    func setupSubviews() {
-        addSubview(headerView)
-        addSubview(separatorView)
-        
-        NSLayoutConstraint.activate([
-            headerView.topAnchor.constraint(equalTo: self.topAnchor),
-            headerView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            headerView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            headerView.heightAnchor.constraint(equalToConstant: 49)
-            ])
-        
-        NSLayoutConstraint.activate([
-            separatorView.topAnchor.constraint(equalTo: headerView.bottomAnchor),
-            separatorView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            separatorView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            separatorView.heightAnchor.constraint(equalToConstant: 1)
-            ])
     }
     
 }
@@ -104,3 +113,4 @@ extension ProfileSectionsView: ProfileSectionDelegate {
         selectedSection = sender
     }
 }
+

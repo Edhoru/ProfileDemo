@@ -30,7 +30,7 @@ class ProfileSectionButton: UIView {
             } else {
                 self.titleLabel.styleB2Disable()
             }
-            nodeView.backgroundColor = newValue == true ? .primary : .textDisable
+            nodeView.backgroundColor = newValue == true ? .primary : .disable
         }
     }
     
@@ -47,7 +47,6 @@ class ProfileSectionButton: UIView {
     
     lazy private var nodeView: UIView = {
         let view = UIView()
-        view.backgroundColor = .textDisable
         view.translatesAutoresizingMaskIntoConstraints = false
         
         return view
@@ -75,8 +74,6 @@ class ProfileSectionButton: UIView {
     }
     
     private func setupUI() {
-        print(titleLabel)
-        self.nodeView.backgroundColor = isSelected == true ? .primary : .textDisable
         
         addSubview(titleLabel)
         addSubview(nodeView)
@@ -108,7 +105,6 @@ class ProfileSectionButton: UIView {
         
         isSelected = true
         delegate?.sectionSelected(self)
-        print("action")
     }
     
 }
