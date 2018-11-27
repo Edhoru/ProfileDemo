@@ -35,6 +35,7 @@ class ProfileSectionsView: UIView {
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.backgroundColor = .white
+        scrollView.isPagingEnabled = true
         return scrollView
     }()
     
@@ -44,7 +45,7 @@ class ProfileSectionsView: UIView {
         
         super.init(frame: .zero)
         
-        backgroundColor = .green
+        scrollView.delegate = self
         
         setupSectionButtons()
         setupSubviews()
@@ -76,6 +77,7 @@ class ProfileSectionsView: UIView {
             scrollView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
             ])
         
+        setupSectionContent()
     }
     
     func setupSectionButtons() {
@@ -103,6 +105,36 @@ class ProfileSectionsView: UIView {
         }
     }
     
+    func setupSectionContent() {
+        let placesView = ProfilePlacesView()
+        scrollView.addSubview(placesView)
+        
+        let favoritesView = ProfileFavoritesView()
+        scrollView.addSubview(favoritesView)
+        
+        let friendsView = ProfileFriendsView()
+        scrollView.addSubview(friendsView)
+        
+        NSLayoutConstraint.activate([
+            placesView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            placesView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            placesView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            placesView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+            
+            favoritesView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            favoritesView.leadingAnchor.constraint(equalTo: placesView.trailingAnchor),
+            favoritesView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            favoritesView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+            
+            friendsView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            friendsView.leadingAnchor.constraint(equalTo: favoritesView.trailingAnchor),
+            friendsView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            friendsView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            friendsView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+            friendsView.heightAnchor.constraint(equalTo: scrollView.heightAnchor)
+            ])
+    }
+    
 }
 
 
@@ -111,6 +143,28 @@ extension ProfileSectionsView: ProfileSectionDelegate {
     func sectionSelected(_ sender: ProfileSectionButton) {
         selectedSection.isSelected = false
         selectedSection = sender
+        
+        let x = scrollView.bounds.width * CGFloat(sender.place)
+        scrollView.setContentOffset(CGPoint(x: x, y: 0), animated: true)
+        
     }
+}
+
+
+extension ProfileSectionsView: UIScrollViewDelegate {
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let offset = scrollView.contentOffset
+        let page = offset.x / scrollView.bounds.width
+        
+        guard let newView = sectionViews.filter({ $0.place == Int(page) }).first else { return }
+        
+        guard newView.place != selectedSection.place else { return }
+        
+        selectedSection.isSelected = false
+        newView.isSelected = true
+        selectedSection = newView
+    }
+    
 }
 

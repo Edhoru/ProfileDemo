@@ -56,6 +56,15 @@
 		46E0210121AD04690053A39B /* OpenSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46E020CC21ACC3FD0053A39B /* OpenSans-SemiBoldItalic.ttf */; };
 		46E0210221AD04690053A39B /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46E020CD21ACC3FD0053A39B /* OpenSans-ExtraBoldItalic.ttf */; };
 		46E0210321AD04690053A39B /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46E020CF21ACC3FD0053A39B /* OpenSans-Regular.ttf */; };
+		46E0210621AD16210053A39B /* ProfilePlacesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E0210521AD16210053A39B /* ProfilePlacesView.swift */; };
+		46E0210721AD16210053A39B /* ProfilePlacesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E0210521AD16210053A39B /* ProfilePlacesView.swift */; };
+		46E0210821AD16210053A39B /* ProfilePlacesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E0210521AD16210053A39B /* ProfilePlacesView.swift */; };
+		46E0210A21AD16AD0053A39B /* ProfileFavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E0210921AD16AD0053A39B /* ProfileFavoritesView.swift */; };
+		46E0210B21AD16AD0053A39B /* ProfileFavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E0210921AD16AD0053A39B /* ProfileFavoritesView.swift */; };
+		46E0210C21AD16AD0053A39B /* ProfileFavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E0210921AD16AD0053A39B /* ProfileFavoritesView.swift */; };
+		46E0210E21AD16BF0053A39B /* ProfileFriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E0210D21AD16BF0053A39B /* ProfileFriendsView.swift */; };
+		46E0210F21AD16BF0053A39B /* ProfileFriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E0210D21AD16BF0053A39B /* ProfileFriendsView.swift */; };
+		46E0211021AD16BF0053A39B /* ProfileFriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E0210D21AD16BF0053A39B /* ProfileFriendsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +114,9 @@
 		46E020E421ACC9F50053A39B /* StyleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleExtensions.swift; sourceTree = "<group>"; };
 		46E020E821ACCA6B0053A39B /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		46E020EC21ACEC5A0053A39B /* ProfileSectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSectionsView.swift; sourceTree = "<group>"; };
+		46E0210521AD16210053A39B /* ProfilePlacesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePlacesView.swift; sourceTree = "<group>"; };
+		46E0210921AD16AD0053A39B /* ProfileFavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFavoritesView.swift; sourceTree = "<group>"; };
+		46E0210D21AD16BF0053A39B /* ProfileFriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFriendsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,14 +168,15 @@
 			isa = PBXGroup;
 			children = (
 				46E0209621ACB96C0053A39B /* AppDelegate.swift */,
-				46E020E321ACC8E30053A39B /* Components */,
 				46E0209821ACB96C0053A39B /* ViewController.swift */,
 				46E0209A21ACB96C0053A39B /* Main.storyboard */,
+				46E020E321ACC8E30053A39B /* Components */,
+				46E0210421AD15D20053A39B /* Sections */,
 				46E0209D21ACB96E0053A39B /* Assets.xcassets */,
 				46E0209F21ACB96E0053A39B /* LaunchScreen.storyboard */,
 				46E020A221ACB96E0053A39B /* Info.plist */,
-				46E020C421ACC3E80053A39B /* Fonts */,
 				46E020E021ACC7E80053A39B /* Style */,
+				46E020C421ACC3E80053A39B /* Fonts */,
 			);
 			path = ProfileDemo;
 			sourceTree = "<group>";
@@ -229,6 +242,16 @@
 				46E020DC21ACC5FA0053A39B /* ProfileSectionButton.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		46E0210421AD15D20053A39B /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				46E0210521AD16210053A39B /* ProfilePlacesView.swift */,
+				46E0210921AD16AD0053A39B /* ProfileFavoritesView.swift */,
+				46E0210D21AD16BF0053A39B /* ProfileFriendsView.swift */,
+			);
+			path = Sections;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,9 +419,12 @@
 				46E020ED21ACEC5A0053A39B /* ProfileSectionsView.swift in Sources */,
 				46E020DD21ACC5FA0053A39B /* ProfileSectionButton.swift in Sources */,
 				46E020E221ACC7E80053A39B /* Colors.swift in Sources */,
+				46E0210A21AD16AD0053A39B /* ProfileFavoritesView.swift in Sources */,
+				46E0210E21AD16BF0053A39B /* ProfileFriendsView.swift in Sources */,
 				46E0209921ACB96C0053A39B /* ViewController.swift in Sources */,
 				46E020E521ACC9F50053A39B /* StyleExtensions.swift in Sources */,
 				46E020E921ACCA6B0053A39B /* Fonts.swift in Sources */,
+				46E0210621AD16210053A39B /* ProfilePlacesView.swift in Sources */,
 				46E0209721ACB96C0053A39B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,8 +433,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46E0210F21AD16BF0053A39B /* ProfileFriendsView.swift in Sources */,
+				46E0210B21AD16AD0053A39B /* ProfileFavoritesView.swift in Sources */,
 				46E020EE21ACEC5A0053A39B /* ProfileSectionsView.swift in Sources */,
 				46E020AC21ACB96E0053A39B /* ProfileDemoTests.swift in Sources */,
+				46E0210721AD16210053A39B /* ProfilePlacesView.swift in Sources */,
 				46E020EA21ACCA6B0053A39B /* Fonts.swift in Sources */,
 				46E020E621ACC9F50053A39B /* StyleExtensions.swift in Sources */,
 			);
@@ -418,8 +447,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46E0211021AD16BF0053A39B /* ProfileFriendsView.swift in Sources */,
+				46E0210C21AD16AD0053A39B /* ProfileFavoritesView.swift in Sources */,
 				46E020EF21ACEC5A0053A39B /* ProfileSectionsView.swift in Sources */,
 				46E020B721ACB96E0053A39B /* ProfileDemoUITests.swift in Sources */,
+				46E0210821AD16210053A39B /* ProfilePlacesView.swift in Sources */,
 				46E020EB21ACCA6B0053A39B /* Fonts.swift in Sources */,
 				46E020E721ACC9F50053A39B /* StyleExtensions.swift in Sources */,
 			);
