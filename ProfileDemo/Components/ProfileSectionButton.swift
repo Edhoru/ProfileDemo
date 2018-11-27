@@ -8,15 +8,35 @@
 
 import UIKit
 
+protocol ProfileSectionDelegate: class {
+    func sectionSelected(_ sender: ProfileSectionButton)
+}
+
 class ProfileSectionButton: UIView {
     
     //Properties
-    private var isSelected: Bool = false
+    weak var delegate: ProfileSectionDelegate?
+    
+    var place: Int = 0
+    private var _isSelected: Bool = false
+    var isSelected: Bool {
+        get {
+            return _isSelected
+        }
+        set {
+            _isSelected = newValue
+            if newValue == true {
+                self.titleLabel.styleB2Enable()
+            } else {
+                self.titleLabel.styleB2Disable()
+            }
+            nodeView.backgroundColor = newValue == true ? .primary : .textDisable
+        }
+    }
     
     //UI
     lazy private var titleLabel: UILabel = {
         let label = UILabel()
-        label.styleB2Enable()
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.5
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -34,26 +54,28 @@ class ProfileSectionButton: UIView {
     }()
     
     
-    
-    init(title: String, selected: Bool) {
+    init(title: String, isSelected: Bool, place: Int) {
         super.init(frame: .zero)
         
         titleLabel.text = title
-        isSelected = selected
+        self.isSelected = isSelected
+        self.place = place
         
         setupProperties()
     }
     
     private func setupProperties() {
+        self.translatesAutoresizingMaskIntoConstraints = false
+        self.backgroundColor = .white
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(buttonAction))
+        addGestureRecognizer(tapGesture)
+        
         setupUI()
     }
     
     private func setupUI() {
-        if isSelected == true {
-            self.titleLabel.styleB2Enable()
-        } else {
-            self.titleLabel.styleB2Disable()
-        }
+        print(titleLabel)
         self.nodeView.backgroundColor = isSelected == true ? .primary : .textDisable
         
         addSubview(titleLabel)
@@ -63,14 +85,30 @@ class ProfileSectionButton: UIView {
             titleLabel.topAnchor.constraint(equalTo: topAnchor),
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
             titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
-            titleLabel.heightAnchor.constraint(equalToConstant: 22)
+            titleLabel.heightAnchor.constraint(equalToConstant: 22),
+            
+            nodeView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5),
+            nodeView.centerXAnchor.constraint(equalTo: titleLabel.centerXAnchor),
+            nodeView.heightAnchor.constraint(equalToConstant: 10),
+            nodeView.widthAnchor.constraint(equalToConstant: 10)
             ])
         
-        
+        nodeView.layer.cornerRadius = 5.0
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    //Action
+    
+    @objc private func buttonAction() {
+        guard isSelected == false else { return }
+        
+        isSelected = true
+        delegate?.sectionSelected(self)
+        print("action")
     }
     
 }

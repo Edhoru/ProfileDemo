@@ -10,6 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    //Properties
+    
+    
+    //UI
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var sectionsContainer: UIView!
@@ -24,9 +28,8 @@ class ViewController: UIViewController {
     }
     
     var sectionsView: ProfileSectionsView = {
-        let sectionsView = ProfileSectionsView()
+        let sectionsView = ProfileSectionsView(with: ["Places", "Favorites", "Friends"])
         sectionsView.translatesAutoresizingMaskIntoConstraints = false
-        sectionsView.backgroundColor = .white
         return sectionsView
     }()
     
