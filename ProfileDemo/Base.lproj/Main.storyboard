@@ -30,12 +30,12 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="NXd-TM-xyx"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UAE-Mc-RKT">
-                                <rect key="frame" x="23.5" y="248" width="328" height="419"/>
+                                <rect key="frame" x="0.0" y="248" width="375" height="419"/>
                                 <color key="backgroundColor" red="0.91764705882352937" green="0.93333333333333335" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
@@ -46,10 +46,10 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KeM-Jf-4VV" secondAttribute="trailing" constant="20" id="LyR-lT-624"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UAE-Mc-RKT" secondAttribute="bottom" id="OkK-B1-s7j"/>
                             <constraint firstItem="UAE-Mc-RKT" firstAttribute="top" secondItem="KeM-Jf-4VV" secondAttribute="bottom" constant="38" id="Rrf-5I-h9J"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UAE-Mc-RKT" secondAttribute="trailing" constant="23.5" id="a2f-o2-lls"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UAE-Mc-RKT" secondAttribute="trailing" id="a2f-o2-lls"/>
                             <constraint firstItem="KeM-Jf-4VV" firstAttribute="top" secondItem="A9u-Wp-t5n" secondAttribute="bottom" constant="8" id="a3q-iy-iLL"/>
                             <constraint firstItem="A9u-Wp-t5n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a5R-i6-sni"/>
-                            <constraint firstItem="UAE-Mc-RKT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="23.5" id="xXg-Ar-wED"/>
+                            <constraint firstItem="UAE-Mc-RKT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xXg-Ar-wED"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

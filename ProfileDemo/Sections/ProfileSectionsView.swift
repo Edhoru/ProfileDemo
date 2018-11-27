@@ -12,8 +12,8 @@ class ProfileSectionsView: UIView {
     
     //Properties
     private var sectionNames: [String]
-    private var sectionViews: [ProfileSectionButton] = []
-    private var selectedSection: ProfileSectionButton!
+    private var sectionViews: [ProfileSectionHeaderView] = []
+    private var selectedSection: ProfileSectionHeaderView!
     
     
     //UI
@@ -82,7 +82,7 @@ class ProfileSectionsView: UIView {
     
     func setupSectionButtons() {
         for index in 0...sectionNames.count - 1 {
-            let sectionView = ProfileSectionButton(title: sectionNames[index], isSelected: index == 0, place: index)
+            let sectionView = ProfileSectionHeaderView(title: sectionNames[index], isSelected: index == 0, place: index)
             sectionView.delegate = self
             headerView.addSubview(sectionView)
             
@@ -138,9 +138,9 @@ class ProfileSectionsView: UIView {
 }
 
 
-extension ProfileSectionsView: ProfileSectionDelegate {
+extension ProfileSectionsView: ProfileSectionsHeaderDelegate {
     
-    func sectionSelected(_ sender: ProfileSectionButton) {
+    func sectionSelected(_ sender: ProfileSectionHeaderView) {
         selectedSection.isSelected = false
         selectedSection = sender
         

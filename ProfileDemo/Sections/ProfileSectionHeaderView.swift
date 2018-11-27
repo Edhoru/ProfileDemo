@@ -8,14 +8,14 @@
 
 import UIKit
 
-protocol ProfileSectionDelegate: class {
-    func sectionSelected(_ sender: ProfileSectionButton)
+protocol ProfileSectionsHeaderDelegate: class {
+    func sectionSelected(_ sender: ProfileSectionHeaderView)
 }
 
-class ProfileSectionButton: UIView {
+class ProfileSectionHeaderView: UIView {
     
     //Properties
-    weak var delegate: ProfileSectionDelegate?
+    weak var delegate: ProfileSectionsHeaderDelegate?
     
     var place: Int = 0
     private var _isSelected: Bool = false
