@@ -10,11 +10,51 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var sectionsContainer: UIView!
+    
+    var profileImage: UIImage? {
+        get {
+            return profileImageView.image
+        }
+        set {
+            profileImageView.image = newValue
+        }
+    }
+    
+    var sectionsView: ProfileSectionsView = {
+        let sectionsView = ProfileSectionsView()
+        sectionsView.translatesAutoresizingMaskIntoConstraints = false
+        sectionsView.backgroundColor = .white
+        return sectionsView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        setupProperties()
+    }
+    
+    func setupProperties() {
+        profileImage = #imageLiteral(resourceName: "Profile Img_11")
+        titleLabel.styleT1()
+        
+        setupSubviews()
+    }
+    
+    func setupSubviews() {
+        
+        sectionsContainer.addSubview(sectionsView)
+        
+        NSLayoutConstraint.activate([
+            sectionsView.topAnchor.constraint(equalTo: sectionsContainer.topAnchor),
+            sectionsView.leadingAnchor.constraint(equalTo: sectionsContainer.leadingAnchor),
+            sectionsView.trailingAnchor.constraint(equalTo: sectionsContainer.trailingAnchor),
+            sectionsView.bottomAnchor.constraint(equalTo: sectionsContainer.bottomAnchor)
+            ])
+        
     }
 
-
 }
-
