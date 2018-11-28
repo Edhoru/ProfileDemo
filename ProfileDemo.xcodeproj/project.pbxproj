@@ -79,6 +79,18 @@
 		46E0212521ADC8A90053A39B /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E0212421ADC8A90053A39B /* ActionButton.swift */; };
 		46E0212621ADC8A90053A39B /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E0212421ADC8A90053A39B /* ActionButton.swift */; };
 		46E0212721ADC8A90053A39B /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E0212421ADC8A90053A39B /* ActionButton.swift */; };
+		46E0212921ADD2A00053A39B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E0212821ADD2A00053A39B /* User.swift */; };
+		46E0212A21ADD2A00053A39B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E0212821ADD2A00053A39B /* User.swift */; };
+		46E0212B21ADD2A00053A39B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E0212821ADD2A00053A39B /* User.swift */; };
+		46E0212D21ADD49C0053A39B /* ProfileFriendsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E0212C21ADD49C0053A39B /* ProfileFriendsDataSource.swift */; };
+		46E0212E21ADD49C0053A39B /* ProfileFriendsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E0212C21ADD49C0053A39B /* ProfileFriendsDataSource.swift */; };
+		46E0212F21ADD49C0053A39B /* ProfileFriendsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E0212C21ADD49C0053A39B /* ProfileFriendsDataSource.swift */; };
+		46E0213121ADDA9E0053A39B /* ProfileFriendsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E0213021ADDA9E0053A39B /* ProfileFriendsCollectionViewCell.swift */; };
+		46E0213221ADDA9E0053A39B /* ProfileFriendsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E0213021ADDA9E0053A39B /* ProfileFriendsCollectionViewCell.swift */; };
+		46E0213321ADDA9E0053A39B /* ProfileFriendsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E0213021ADDA9E0053A39B /* ProfileFriendsCollectionViewCell.swift */; };
+		46E0213521AE079B0053A39B /* FollowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E0213421AE079B0053A39B /* FollowButton.swift */; };
+		46E0213621AE079B0053A39B /* FollowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E0213421AE079B0053A39B /* FollowButton.swift */; };
+		46E0213721AE079B0053A39B /* FollowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E0213421AE079B0053A39B /* FollowButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +147,10 @@
 		46E0211B21ADB48D0053A39B /* ProfilePlacesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePlacesDataSource.swift; sourceTree = "<group>"; };
 		46E0211F21ADBCB60053A39B /* ProfilePlacesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePlacesCollectionViewCell.swift; sourceTree = "<group>"; };
 		46E0212421ADC8A90053A39B /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		46E0212821ADD2A00053A39B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		46E0212C21ADD49C0053A39B /* ProfileFriendsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFriendsDataSource.swift; sourceTree = "<group>"; };
+		46E0213021ADDA9E0053A39B /* ProfileFriendsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFriendsCollectionViewCell.swift; sourceTree = "<group>"; };
+		46E0213421AE079B0053A39B /* FollowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,7 +271,6 @@
 				46E0211521ADA8820053A39B /* Friends */,
 				46E0211321ADA8710053A39B /* Places */,
 				46E0210921AD16AD0053A39B /* ProfileFavoritesView.swift */,
-				46E0210D21AD16BF0053A39B /* ProfileFriendsView.swift */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -280,6 +295,9 @@
 		46E0211521ADA8820053A39B /* Friends */ = {
 			isa = PBXGroup;
 			children = (
+				46E0210D21AD16BF0053A39B /* ProfileFriendsView.swift */,
+				46E0212C21ADD49C0053A39B /* ProfileFriendsDataSource.swift */,
+				46E0213021ADDA9E0053A39B /* ProfileFriendsCollectionViewCell.swift */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -288,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				46E0211721ADAF830053A39B /* Place.swift */,
+				46E0212821ADD2A00053A39B /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -296,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				46E0212421ADC8A90053A39B /* ActionButton.swift */,
+				46E0213421AE079B0053A39B /* FollowButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -462,18 +482,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46E0212D21ADD49C0053A39B /* ProfileFriendsDataSource.swift in Sources */,
 				46E020ED21ACEC5A0053A39B /* ProfileSectionsView.swift in Sources */,
 				46E020DD21ACC5FA0053A39B /* ProfileSectionHeaderView.swift in Sources */,
 				46E0212021ADBCB60053A39B /* ProfilePlacesCollectionViewCell.swift in Sources */,
 				46E020E221ACC7E80053A39B /* Colors.swift in Sources */,
 				46E0210A21AD16AD0053A39B /* ProfileFavoritesView.swift in Sources */,
+				46E0213121ADDA9E0053A39B /* ProfileFriendsCollectionViewCell.swift in Sources */,
 				46E0210E21AD16BF0053A39B /* ProfileFriendsView.swift in Sources */,
 				46E0209921ACB96C0053A39B /* ViewController.swift in Sources */,
 				46E020E521ACC9F50053A39B /* StyleExtensions.swift in Sources */,
+				46E0212921ADD2A00053A39B /* User.swift in Sources */,
 				46E020E921ACCA6B0053A39B /* Fonts.swift in Sources */,
 				46E0211C21ADB48D0053A39B /* ProfilePlacesDataSource.swift in Sources */,
 				46E0211821ADAF830053A39B /* Place.swift in Sources */,
 				46E0210621AD16210053A39B /* ProfilePlacesView.swift in Sources */,
+				46E0213521AE079B0053A39B /* FollowButton.swift in Sources */,
 				46E0209721ACB96C0053A39B /* AppDelegate.swift in Sources */,
 				46E0212521ADC8A90053A39B /* ActionButton.swift in Sources */,
 			);
@@ -483,15 +507,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46E0212A21ADD2A00053A39B /* User.swift in Sources */,
 				46E0210F21AD16BF0053A39B /* ProfileFriendsView.swift in Sources */,
 				46E0210B21AD16AD0053A39B /* ProfileFavoritesView.swift in Sources */,
 				46E020EE21ACEC5A0053A39B /* ProfileSectionsView.swift in Sources */,
 				46E020AC21ACB96E0053A39B /* ProfileDemoTests.swift in Sources */,
 				46E0210721AD16210053A39B /* ProfilePlacesView.swift in Sources */,
+				46E0212E21ADD49C0053A39B /* ProfileFriendsDataSource.swift in Sources */,
+				46E0213621AE079B0053A39B /* FollowButton.swift in Sources */,
 				46E020EA21ACCA6B0053A39B /* Fonts.swift in Sources */,
 				46E0211D21ADB48D0053A39B /* ProfilePlacesDataSource.swift in Sources */,
 				46E020E621ACC9F50053A39B /* StyleExtensions.swift in Sources */,
 				46E0211121ADA86B0053A39B /* ProfileSectionHeaderView.swift in Sources */,
+				46E0213221ADDA9E0053A39B /* ProfileFriendsCollectionViewCell.swift in Sources */,
 				46E0212121ADBCB60053A39B /* ProfilePlacesCollectionViewCell.swift in Sources */,
 				46E0211921ADAF830053A39B /* Place.swift in Sources */,
 				46E0212621ADC8A90053A39B /* ActionButton.swift in Sources */,
@@ -502,15 +530,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46E0212B21ADD2A00053A39B /* User.swift in Sources */,
 				46E0211021AD16BF0053A39B /* ProfileFriendsView.swift in Sources */,
 				46E0210C21AD16AD0053A39B /* ProfileFavoritesView.swift in Sources */,
 				46E020EF21ACEC5A0053A39B /* ProfileSectionsView.swift in Sources */,
 				46E020B721ACB96E0053A39B /* ProfileDemoUITests.swift in Sources */,
 				46E0210821AD16210053A39B /* ProfilePlacesView.swift in Sources */,
+				46E0212F21ADD49C0053A39B /* ProfileFriendsDataSource.swift in Sources */,
+				46E0213721AE079B0053A39B /* FollowButton.swift in Sources */,
 				46E020EB21ACCA6B0053A39B /* Fonts.swift in Sources */,
 				46E0211E21ADB48D0053A39B /* ProfilePlacesDataSource.swift in Sources */,
 				46E020E721ACC9F50053A39B /* StyleExtensions.swift in Sources */,
 				46E0211221ADA86B0053A39B /* ProfileSectionHeaderView.swift in Sources */,
+				46E0213321ADDA9E0053A39B /* ProfileFriendsCollectionViewCell.swift in Sources */,
 				46E0212221ADBCB60053A39B /* ProfilePlacesCollectionViewCell.swift in Sources */,
 				46E0211A21ADAF830053A39B /* Place.swift in Sources */,
 				46E0212721ADC8A90053A39B /* ActionButton.swift in Sources */,

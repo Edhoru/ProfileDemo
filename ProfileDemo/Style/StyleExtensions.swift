@@ -45,6 +45,12 @@ extension UILabel {
         self.textColor = .textDisable
         self.font = Fonts.b16
     }
+    
+    /** Used on friends cells */
+    func styleB3Disable() {
+        self.textColor = .textDisable
+        self.font = Fonts.b14
+    }
 
     func styleB3Enable() {
         self.textColor = .primary
@@ -56,6 +62,18 @@ extension UILabel {
         self.font = Fonts.b13
         self.text = self.text?.uppercased()
         self.textAlignment = .center
+    }
+    
+    func styleCellsButtonPrimary() {
+        self.textColor = .primary
+        self.font = Fonts.b14
+        self.text = self.text?.capitalized
+    }
+    
+    func styleCellsButtonDisable() {
+        self.textColor = .textDisable
+        self.font = Fonts.b14
+        self.text = self.text?.capitalized
     }
     
     
@@ -72,4 +90,28 @@ extension ActionButton {
         self.layer.borderColor = UIColor.primary.cgColor
     }
     
+}
+
+
+extension FollowButton {
+    
+    func style(mode: FollowButton.Mode) {
+        self.clipsToBounds = true
+        self.layer.cornerRadius = 2
+        self.layer.borderColor = UIColor.primary.cgColor
+        
+        titleLabel?.font = Fonts.b14
+        
+        switch mode {
+        case .follow:
+            self.layer.borderWidth = 1.0
+            setTitleColor(.primary, for: .normal)
+            break
+        case .unfollow:
+            self.layer.borderWidth = 0.0
+            setTitleColor(.textDisable, for: .normal)
+            break
+        }
+        
+    }
 }

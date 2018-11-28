@@ -35,6 +35,7 @@ class ActionButton: UIButton {
         super.init(frame: .zero)
         
         translatesAutoresizingMaskIntoConstraints = false
+        backgroundColor = .white
         
         iconView.image = icon
         label.text = title
