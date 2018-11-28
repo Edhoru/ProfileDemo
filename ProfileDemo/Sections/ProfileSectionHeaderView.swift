@@ -26,11 +26,11 @@ class ProfileSectionHeaderView: UIView {
         set {
             _isSelected = newValue
             if newValue == true {
-                self.titleLabel.styleB2Enable()
+                self.titleLabel.styleB2(.dark)
             } else {
-                self.titleLabel.styleB2Disable()
+                self.titleLabel.styleB2(.light)
             }
-            nodeView.backgroundColor = newValue == true ? .primary : .disable
+            nodeView.backgroundColor = newValue == true ? .primary : .lightElement
         }
     }
     

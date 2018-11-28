@@ -56,15 +56,15 @@ class ProfileFavoritesView: UIView {
         addSubview(exploreButton)
         
         NSLayoutConstraint.activate([
-            emoticonView.topAnchor.constraint(greaterThanOrEqualTo: topAnchor, constant: 48),
+            emoticonView.topAnchor.constraint(equalTo: topAnchor, constant: 48),
             emoticonView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            emoticonView.bottomAnchor.constraint(lessThanOrEqualTo: messageLabel.topAnchor, constant: -20),
-            emoticonView.heightAnchor.constraint(equalToConstant: 50),
-            emoticonView.widthAnchor.constraint(equalToConstant: 50),
+            emoticonView.heightAnchor.constraint(equalToConstant: 43.5),
+            emoticonView.widthAnchor.constraint(equalToConstant: 43.5),
             
-            messageLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+            messageLabel.topAnchor.constraint(equalTo: emoticonView.bottomAnchor, constant: 20),
             messageLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 48),
             messageLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -48),
+            messageLabel.heightAnchor.constraint(equalToConstant: 80),
             
             exploreButton.topAnchor.constraint(equalTo: messageLabel.bottomAnchor, constant: 20),
             exploreButton.centerXAnchor.constraint(equalTo: centerXAnchor),

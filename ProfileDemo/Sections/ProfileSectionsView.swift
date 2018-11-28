@@ -27,7 +27,7 @@ class ProfileSectionsView: UIView {
     var separatorView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .disable
+        view.backgroundColor = .lightElement
         return view
     }()
     

@@ -46,14 +46,8 @@ extension UILabel {
     }
     
     /** Used on section buttons */
-    func styleB2Enable() {
-        self.textColor = .textDark
-        self.font = Fonts.b16
-    }
-    
-    /** Used on section buttons */
-    func styleB2Disable() {
-        self.textColor = .textLight
+    func styleB2(_ mode: UIColor.Mode) {
+        self.textColor = textColor(for: mode)
         self.font = Fonts.b16
     }
     
@@ -63,8 +57,8 @@ extension UILabel {
         self.font = Fonts.b14
     }
 
-    func styleB3Enable() {
-        self.textColor = .primary
+    func styleB4(_ mode: UIColor.Mode) {
+        self.textColor = textColor(for: mode)
         self.font = Fonts.b11
     }
     
@@ -111,7 +105,7 @@ extension ActionButton {
         label.styleActionButton()
         self.clipsToBounds = true
         self.layer.cornerRadius = 2
-        self.layer.borderWidth = 1.0
+        self.layer.borderWidth = 0.5
         self.layer.borderColor = UIColor.primary.cgColor
     }
     
@@ -129,7 +123,7 @@ extension FollowButton {
         
         switch mode {
         case .follow:
-            self.layer.borderWidth = 1.0
+            self.layer.borderWidth = 0.5
             setTitleColor(.primary, for: .normal)
             break
         case .unfollow:

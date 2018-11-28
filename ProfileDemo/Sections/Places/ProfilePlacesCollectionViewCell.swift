@@ -50,7 +50,7 @@ class ProfilePlacesCollectionViewCell: UICollectionViewCell {
         label.backgroundColor = .white
         label.layer.cornerRadius = 2
         label.clipsToBounds = true
-        label.styleB3(.primary)
+        label.styleB4(.primary)
         return label
     }()
     
