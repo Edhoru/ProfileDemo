@@ -270,7 +270,6 @@
 				46E0211421ADA8790053A39B /* Favorites */,
 				46E0211521ADA8820053A39B /* Friends */,
 				46E0211321ADA8710053A39B /* Places */,
-				46E0210921AD16AD0053A39B /* ProfileFavoritesView.swift */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -288,6 +287,7 @@
 		46E0211421ADA8790053A39B /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
+				46E0210921AD16AD0053A39B /* ProfileFavoritesView.swift */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";

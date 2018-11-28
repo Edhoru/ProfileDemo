@@ -12,7 +12,7 @@ extension UILabel {
     
     /** Biggest size, used on the user name */
     func styleT1() {
-        self.textColor = .textEnable
+        self.textColor = .textDark
         self.font = Fonts.t22
     }
     
@@ -22,33 +22,44 @@ extension UILabel {
         self.font = Fonts.t22
     }
     
-    /** Used on */
     func styleT2() {
-        self.textColor = .textEnable
+        self.textColor = .textDark
         self.font = Fonts.t16
     }
     
+    
     /** Used on */
+    func styleB1(_ mode: UIColor.Mode) {
+        self.textColor = textColor(for: mode)
+        self.font = Fonts.b18
+    }
+    
+    /** Used on */
+    func styleB1(light: Bool) {
+        self.textColor = light == true ? .textLight : .textDark
+        self.font = Fonts.b18
+    }
+    
     func styleB1() {
-        self.textColor = .textEnable
+        self.textColor = .textDark
         self.font = Fonts.b18
     }
     
     /** Used on section buttons */
     func styleB2Enable() {
-        self.textColor = .textEnable
+        self.textColor = .textDark
         self.font = Fonts.b16
     }
     
     /** Used on section buttons */
     func styleB2Disable() {
-        self.textColor = .textDisable
+        self.textColor = .textLight
         self.font = Fonts.b16
     }
     
     /** Used on friends cells */
-    func styleB3Disable() {
-        self.textColor = .textDisable
+    func styleB3(_ mode: UIColor.Mode) {
+        self.textColor = textColor(for: mode)
         self.font = Fonts.b14
     }
 
@@ -71,12 +82,26 @@ extension UILabel {
     }
     
     func styleCellsButtonDisable() {
-        self.textColor = .textDisable
+        self.textColor = .textLight
         self.font = Fonts.b14
         self.text = self.text?.capitalized
     }
     
     
+    private func textColor(for mode: UIColor.Mode) -> UIColor {
+        switch mode {
+        case .primary:
+            return .primary
+        case .light:
+            return .textLight
+        case .medium:
+            return .textMedium
+        case .dark:
+            return .textDark
+        case .white:
+            return .white
+        }
+    }
 }
 
 
@@ -109,7 +134,7 @@ extension FollowButton {
             break
         case .unfollow:
             self.layer.borderWidth = 0.0
-            setTitleColor(.textDisable, for: .normal)
+            setTitleColor(.textLight, for: .normal)
             break
         }
         

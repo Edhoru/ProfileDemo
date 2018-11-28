@@ -31,7 +31,7 @@ class ProfileFriendsCollectionViewCell: UICollectionViewCell {
         let label = UILabel(frame: .zero)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.backgroundColor = .white
-        label.styleB3Disable()
+        label.styleB3(.medium)
         return label
     }()
     
