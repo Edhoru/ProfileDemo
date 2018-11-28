@@ -14,7 +14,7 @@ class ProfileFriendsDataSource {
         return [
             User(name: "Landon Clark",
                  username: "@landon",
-                 followed: true,
+                 followed: false,
                  photo:#imageLiteral(resourceName: "Profile Img_10") ),
             User(name: "Felix Hamilton",
                  username: "@felix",
