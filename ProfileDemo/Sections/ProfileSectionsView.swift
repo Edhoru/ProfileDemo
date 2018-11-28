@@ -14,6 +14,9 @@ class ProfileSectionsView: UIView {
     private var sectionNames: [String]
     private var sectionViews: [ProfileSectionHeaderView] = []
     private var selectedSection: ProfileSectionHeaderView!
+    private let placesView = ProfilePlacesView()
+    private let favoritesView = ProfileFavoritesView()
+    private let friendsView = ProfileFriendsView()
     
     
     //UI
@@ -106,13 +109,8 @@ class ProfileSectionsView: UIView {
     }
     
     func setupSectionContent() {
-        let placesView = ProfilePlacesView()
         scrollView.addSubview(placesView)
-        
-        let favoritesView = ProfileFavoritesView()
         scrollView.addSubview(favoritesView)
-        
-        let friendsView = ProfileFriendsView()
         scrollView.addSubview(friendsView)
         
         NSLayoutConstraint.activate([
@@ -164,6 +162,21 @@ extension ProfileSectionsView: UIScrollViewDelegate {
         selectedSection.isSelected = false
         newView.isSelected = true
         selectedSection = newView
+        
+        if offset == favoritesView.frame.origin {
+            favoritesView.startAnimation()
+        } else {
+            favoritesView.stopAnimation()
+        }
+    }
+    
+    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+        let offset = scrollView.contentOffset
+        if offset == favoritesView.frame.origin {
+            favoritesView.startAnimation()
+        } else {
+            favoritesView.stopAnimation()
+        }
     }
     
 }

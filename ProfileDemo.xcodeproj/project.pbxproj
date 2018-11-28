@@ -91,6 +91,9 @@
 		46E0213521AE079B0053A39B /* FollowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E0213421AE079B0053A39B /* FollowButton.swift */; };
 		46E0213621AE079B0053A39B /* FollowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E0213421AE079B0053A39B /* FollowButton.swift */; };
 		46E0213721AE079B0053A39B /* FollowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E0213421AE079B0053A39B /* FollowButton.swift */; };
+		46EE48F321AE63C7006CA250 /* EmoticonScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EE48F221AE63C7006CA250 /* EmoticonScene.swift */; };
+		46EE48F421AE63C7006CA250 /* EmoticonScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EE48F221AE63C7006CA250 /* EmoticonScene.swift */; };
+		46EE48F521AE63C7006CA250 /* EmoticonScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EE48F221AE63C7006CA250 /* EmoticonScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +154,7 @@
 		46E0212C21ADD49C0053A39B /* ProfileFriendsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFriendsDataSource.swift; sourceTree = "<group>"; };
 		46E0213021ADDA9E0053A39B /* ProfileFriendsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFriendsCollectionViewCell.swift; sourceTree = "<group>"; };
 		46E0213421AE079B0053A39B /* FollowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowButton.swift; sourceTree = "<group>"; };
+		46EE48F221AE63C7006CA250 /* EmoticonScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoticonScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +205,7 @@
 		46E0209521ACB96C0053A39B /* ProfileDemo */ = {
 			isa = PBXGroup;
 			children = (
+				46EE48F121AE63A5006CA250 /* Animations */,
 				46E0212321ADC85B0053A39B /* Components */,
 				46E0211621ADAF770053A39B /* Models */,
 				46E0209621ACB96C0053A39B /* AppDelegate.swift */,
@@ -318,6 +323,14 @@
 				46E0213421AE079B0053A39B /* FollowButton.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		46EE48F121AE63A5006CA250 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				46EE48F221AE63C7006CA250 /* EmoticonScene.swift */,
+			);
+			path = Animations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -490,6 +503,7 @@
 				46E0210A21AD16AD0053A39B /* ProfileFavoritesView.swift in Sources */,
 				46E0213121ADDA9E0053A39B /* ProfileFriendsCollectionViewCell.swift in Sources */,
 				46E0210E21AD16BF0053A39B /* ProfileFriendsView.swift in Sources */,
+				46EE48F321AE63C7006CA250 /* EmoticonScene.swift in Sources */,
 				46E0209921ACB96C0053A39B /* ViewController.swift in Sources */,
 				46E020E521ACC9F50053A39B /* StyleExtensions.swift in Sources */,
 				46E0212921ADD2A00053A39B /* User.swift in Sources */,
@@ -515,6 +529,7 @@
 				46E0210721AD16210053A39B /* ProfilePlacesView.swift in Sources */,
 				46E0212E21ADD49C0053A39B /* ProfileFriendsDataSource.swift in Sources */,
 				46E0213621AE079B0053A39B /* FollowButton.swift in Sources */,
+				46EE48F421AE63C7006CA250 /* EmoticonScene.swift in Sources */,
 				46E020EA21ACCA6B0053A39B /* Fonts.swift in Sources */,
 				46E0211D21ADB48D0053A39B /* ProfilePlacesDataSource.swift in Sources */,
 				46E020E621ACC9F50053A39B /* StyleExtensions.swift in Sources */,
@@ -538,6 +553,7 @@
 				46E0210821AD16210053A39B /* ProfilePlacesView.swift in Sources */,
 				46E0212F21ADD49C0053A39B /* ProfileFriendsDataSource.swift in Sources */,
 				46E0213721AE079B0053A39B /* FollowButton.swift in Sources */,
+				46EE48F521AE63C7006CA250 /* EmoticonScene.swift in Sources */,
 				46E020EB21ACCA6B0053A39B /* Fonts.swift in Sources */,
 				46E0211E21ADB48D0053A39B /* ProfilePlacesDataSource.swift in Sources */,
 				46E020E721ACC9F50053A39B /* StyleExtensions.swift in Sources */,

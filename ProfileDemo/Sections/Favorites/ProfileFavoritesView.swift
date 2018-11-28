@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import SpriteKit
 
 class ProfileFavoritesView: UIView {
     
     //Properties
-    
+    let scene: EmoticonScene!
     
     //UI
     lazy var emoticonView: UIImageView = {
@@ -37,12 +38,22 @@ class ProfileFavoritesView: UIView {
         return button
     }()
     
+    lazy var animationView: SKView = {
+        let view = SKView(frame: .zero)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.ignoresSiblingOrder = true
+        return view
+    }()
+    
     
     init() {
+        scene = EmoticonScene(size: CGSize(width: 50, height: 50))
+        
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = .white
         
+        setupAnimation()
         setupSubviews()
     }
     
@@ -50,16 +61,26 @@ class ProfileFavoritesView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func setupAnimation() {
+        animationView.presentScene(scene)
+    }
+    
     func setupSubviews() {
         addSubview(emoticonView)
         addSubview(messageLabel)
         addSubview(exploreButton)
+        addSubview(animationView)
         
         NSLayoutConstraint.activate([
             emoticonView.topAnchor.constraint(equalTo: topAnchor, constant: 48),
             emoticonView.centerXAnchor.constraint(equalTo: centerXAnchor),
             emoticonView.heightAnchor.constraint(equalToConstant: 43.5),
             emoticonView.widthAnchor.constraint(equalToConstant: 43.5),
+            
+            animationView.topAnchor.constraint(equalTo: topAnchor, constant: 48),
+            animationView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            animationView.heightAnchor.constraint(equalToConstant: 43.5),
+            animationView.widthAnchor.constraint(equalToConstant: 43.5),
             
             messageLabel.topAnchor.constraint(equalTo: emoticonView.bottomAnchor, constant: 20),
             messageLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 48),
@@ -72,6 +93,14 @@ class ProfileFavoritesView: UIView {
             exploreButton.widthAnchor.constraint(equalToConstant: 105)
             
             ])
+    }
+    
+    func startAnimation() {
+        scene.animateBear()
+    }
+    
+    func stopAnimation() {
+        scene.stop()
     }
     
 }
