@@ -37,8 +37,17 @@ class FollowButton: UIButton {
     }
     
     private func updateStyle() {
-        setTitle(mode.rawValue.capitalized, for: .normal)
-        style(mode: mode)
+        UIView.animate(withDuration: 0.2, animations: {
+            self.alpha = 0.0
+        }) { (success) in
+            self.setTitle(self.mode.rawValue.capitalized, for: .normal)
+            self.style(mode: self.mode)
+            
+            UIView.animate(withDuration: 0.3, animations: {
+                self.alpha = 1.0
+            })
+        }
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
