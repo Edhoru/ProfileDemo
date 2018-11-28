@@ -205,12 +205,10 @@
 		46E0209521ACB96C0053A39B /* ProfileDemo */ = {
 			isa = PBXGroup;
 			children = (
-				46EE48F121AE63A5006CA250 /* Animations */,
-				46E0212321ADC85B0053A39B /* Components */,
-				46E0211621ADAF770053A39B /* Models */,
 				46E0209621ACB96C0053A39B /* AppDelegate.swift */,
 				46E0209821ACB96C0053A39B /* ViewController.swift */,
 				46E0209A21ACB96C0053A39B /* Main.storyboard */,
+				46EE48F621AE77B6006CA250 /* App */,
 				46E0210421AD15D20053A39B /* Sections */,
 				46E0209D21ACB96E0053A39B /* Assets.xcassets */,
 				46E0209F21ACB96E0053A39B /* LaunchScreen.storyboard */,
@@ -331,6 +329,16 @@
 				46EE48F221AE63C7006CA250 /* EmoticonScene.swift */,
 			);
 			path = Animations;
+			sourceTree = "<group>";
+		};
+		46EE48F621AE77B6006CA250 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				46EE48F121AE63A5006CA250 /* Animations */,
+				46E0212321ADC85B0053A39B /* Components */,
+				46E0211621ADAF770053A39B /* Models */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
