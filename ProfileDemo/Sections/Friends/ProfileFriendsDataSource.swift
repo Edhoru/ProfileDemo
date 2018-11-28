@@ -14,7 +14,7 @@ class ProfileFriendsDataSource {
         return [
             User(name: "Landon Clark",
                  username: "@landon",
-                 followed: false,
+                 followed: true,
                  photo:#imageLiteral(resourceName: "Profile Img_10") ),
             User(name: "Felix Hamilton",
                  username: "@felix",
@@ -22,15 +22,15 @@ class ProfileFriendsDataSource {
                  photo:#imageLiteral(resourceName: "Profile Img_9") ),
             User(name: "Josh Ranger",
                  username: "@josh_24",
-                 followed: false,
+                 followed: true,
                  photo:#imageLiteral(resourceName: "Profile Img_8") ),
             User(name: "Niki McDuffie",
                  username: "@Duffie",
-                 followed: false,
+                 followed: true,
                  photo:#imageLiteral(resourceName: "Profile Img_7") ),
             User(name: "Elisa Finch",
                  username: "@efinch",
-                 followed: false,
+                 followed: true,
                  photo:#imageLiteral(resourceName: "Profile Img_6") )
         ]
     }
